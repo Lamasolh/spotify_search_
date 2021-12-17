@@ -1,2 +1,3 @@
 # spotify_search_
-npm install react-scripts --save then npm start
+1-npm install react-scripts --save
+2-npm start
