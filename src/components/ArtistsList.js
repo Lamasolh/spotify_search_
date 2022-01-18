@@ -13,7 +13,7 @@ const ArtistsList = ({ artists }) => {
           {artists.items.map((artist, index) => {
             return (
               <React.Fragment key={index}>
-                { artist.name!=="Nawal Al Zoghbi" &&
+                { artist.name!=="Nawal Al Zoghbi" && artist.name!=="Leonard Bernstein" &&
                 <Card style={{ width: '18rem' }}>
                 <a
                     target="_blank"
