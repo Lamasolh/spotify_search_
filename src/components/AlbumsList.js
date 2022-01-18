@@ -35,8 +35,8 @@ const AlbumsList = ({ albums }) => {
                         {album.artists.map((artist) => artist.name).join(', ')}
                       </small>
                       
-                      <p>{album.release_date}</p>
-                      <p>{album.total_tracks} tracks</p>
+                         <small>{album.release_date}</small><br></br>
+                      <small>{album.total_tracks} tracks</small>
                     </Card.Text>
                     <Card.Footer className="text-muted">  <a
                     target="_blank"
