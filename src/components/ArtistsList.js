@@ -7,7 +7,6 @@ import {Link} from 'react-router-dom';
 
 const ArtistsList = ({ artists }) => {
   return (
-    
     <React.Fragment>
       {Object.keys(artists).length > 0 && (
         <div className="artists">
