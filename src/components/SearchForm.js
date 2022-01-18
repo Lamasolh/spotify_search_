@@ -22,7 +22,7 @@ const SearchForm = (props) => {
   };
 
   return (
-    <div class='inputWithButton'>
+    <div className='inputWithButton'>
       <Form onSubmit={handleSearch}>
         {errorMsg && <p className="errorMsg">{errorMsg}</p>}
         <Form.Group controlId="formBasicEmail">
