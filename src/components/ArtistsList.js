@@ -7,12 +7,14 @@ import {Link} from 'react-router-dom';
 
 const ArtistsList = ({ artists }) => {
   return (
+    
     <React.Fragment>
       {Object.keys(artists).length > 0 && (
         <div className="artists">
           {artists.items.map((artist, index) => {
             return (
               <React.Fragment key={index}>
+                { artist.name!=="Nawal Al Zoghbi" &&
                 <Card style={{ width: '18rem' }}>
                 <a
                     target="_blank"
@@ -31,11 +33,11 @@ const ArtistsList = ({ artists }) => {
                     )}
                     </a>
                   <Card.Body>
-                    <Card.Title>{artist.name}</Card.Title>
-                    <Link to={"albums/"+artist.id}>  <p>{artist.followers.total.toLocaleString('en')} followers</p></Link>
+                    <Card.Title>{ artist.name!=="Nawal Al Zoghbi" && <h5> {artist.name}</h5> }</Card.Title>
+                    <Link to={"albums/"+artist.id}>  { artist.name!=="Nawal Al Zoghbi" && <h5>{artist.followers.total.toLocaleString('en')} followers</h5>}</Link>
                     <ReactStars value={artist.popularity/20} readonly/>
                   </Card.Body>
-                </Card>
+                </Card>}
               </React.Fragment>
             );
           })}
